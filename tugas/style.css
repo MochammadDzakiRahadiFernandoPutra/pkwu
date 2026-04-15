@@ -1,0 +1,69 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff9b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* CONTAINER UTAMA */
+.container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+
+  background: #e5e5e5; /* abu-abu */
+  padding: 40px;
+  border-radius: 16px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* SLIDER */
+.slider {
+  background: #f2f2f2;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+/* CARD (kalau masih dipakai login/register) */
+.card {
+  background: #ccc;
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+/* FORM */
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #eee;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #333;
+}

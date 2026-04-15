@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+  <h2>Register</h2>
+
+  <div class="row">
+    <input type="text" placeholder="First name" required>
+    <input type="text" placeholder="Last name" required>
+  </div>
+
+  <input type="email" placeholder="Email address" required>
+  <input type="password" placeholder="Enter password" required>
+<label>Date of birth</label>
+<div class="row">
+  <select id="day"></select>
+  <select id="month"></select>
+  <select id="year"></select>
+</div>
+
+<script>
+  const day = document.getElementById("day");
+  const month = document.getElementById("month");
+  const year = document.getElementById("year");
+
+  // Hari (1 - 31)
+  for (let i = 1; i <= 31; i++) {
+    let option = document.createElement("option");
+    option.value = i;
+    option.text = i;
+    day.appendChild(option);
+  }
+
+  // Bulan
+  const months = [
+    "Januari","Februari","Maret","April","Mei","Juni",
+    "Juli","Agustus","September","Oktober","November","Desember"
+  ];
+
+  months.forEach((m, i) => {
+    let option = document.createElement("option");
+    option.value = i + 1;
+    option.text = m;
+    month.appendChild(option);
+  });
+
+  // Tahun (misal 1950 - sekarang)
+  const currentYear = new Date().getFullYear();
+  for (let i = currentYear; i >= 1950; i--) {
+    let option = document.createElement("option");
+    option.value = i;
+    option.text = i;
+    year.appendChild(option);
+  }
+</script>
+
+
+  <button>Register</button>
+
+  <p class="link">Already have an account? 
+    <a href="login.html">Sign in</a>
+  </p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
