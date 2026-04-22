@@ -7,33 +7,25 @@ export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Login dengan:", { email, password });
-    // Masukkan logika login kamu di sini
-  };
-
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-100">
+    <div className="min-h-screen flex items-center justify-center bg-white">
       <div className="bg-[#ccc] p-8 rounded-lg shadow-lg w-[350px]">
-        <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Login</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center text-black">Login</h2>
         
-        <form onSubmit={handleLogin} className="space-y-4">
+        <form className="space-y-4">
           <input
             type="email"
             placeholder="Alamat email"
-            className="w-full p-3 rounded-md bg-[#eee] border-none focus:ring-2 focus:ring-blue-400 outline-none"
+            className="w-full p-3 rounded-md bg-[#eee] border-none text-black placeholder-gray-500 focus:ring-2 focus:ring-blue-500 outline-none"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            required
           />
           <input
             type="password"
             placeholder="Masukkan password"
-            className="w-full p-3 rounded-md bg-[#eee] border-none focus:ring-2 focus:ring-blue-400 outline-none"
+            className="w-full p-3 rounded-md bg-[#eee] border-none text-black placeholder-gray-500 focus:ring-2 focus:ring-blue-500 outline-none"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            required
           />
           <button
             type="submit"
@@ -43,9 +35,9 @@ export default function LoginPage() {
           </button>
         </form>
 
-        <p className="mt-6 text-center text-sm text-gray-700">
+        <p className="mt-6 text-center text-sm text-black font-medium">
           Belum punya akun?{" "}
-          <Link href="/register" className="text-blue-600 underline hover:text-blue-800">
+          <Link href="/register" className="text-blue-700 underline hover:text-blue-900">
             Register
           </Link>
         </p>
